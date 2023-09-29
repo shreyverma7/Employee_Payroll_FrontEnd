@@ -19,58 +19,59 @@
             <p class="header">Employee Payroll Form</p>
             <div class="row">
                 <label>Name: </label>
-                <input name="name" type="text" id="name" placeholder="Enter Name" class="input-text"
-                 onchange="nameChange(event)" />
+                <input name="name" type="text" id="name" placeholder="Enter Name" 
+                 onchange="nameChange(event)"/>
+                 <error-output class="text-error" for="text" style="color: red;"></error-output>
             </div>
             <div class="row">
                 <label class="label text">Profile Name:</label>
                 <div class="profile-radio-content">
                     <div style=" display: flex;">
-                        <input type="radio" id="profile1" name="profile" value="Ellipse 1.png" onchange="profilechane(event)"/>
-                        <img class="profile"  src="Ellipse 1.png">
+                        <input type="radio" id="profile1" name="profile" value="assets/profile-images/Ellipse 1.png" onchange="profileImageChange(event)"/>
+                        <img class="profile"  src="assets/profile-images/Ellipse1.png">
                     </div>
                     <div style=" display: flex;">
-                        <input type="radio" id="profile2" name="profile" value="Ellipse -2.png" onchange="profilechane(event)"/>
-                        <img class="profile"  src="Ellipse -2.png">
+                        <input type="radio" id="profile2" name="profile" value="Ellipse -2.png" onchange="profileImageChange(event)"/>
+                        <img class="profile"  src="assets/profile-images/Ellipse-2.png">
                     </div>
                     <div style=" display: flex;">
-                        <input type="radio" id="profile3" name="profile" value="Ellipse -3.png" onchange="profilechane(event)"/>
-                        <img class="profile" src="Ellipse -3.png">
+                        <input type="radio" id="profile3" name="profile" value="Ellipse -3.png" onchange="profileImageChange(event)"/>
+                        <img class="profile" src="assets/profile-images/Ellipse -3.png">
                     </div>
                     <div style=" display: flex;">
-                        <input type="radio" id="profile4" name="profile" value="Ellipse -4.png" onchange="profilechane(event)"/>
-                        <img class="profile" src="Ellipse -4.png">
+                        <input type="radio" id="profile4" name="profile" value="Ellipse -4.png" onchange="profileImageChange(event)"/>
+                        <img class="profile" src="assets/profile-images/Ellipse-4.png">
                     </div>
                 </div>
             </div>
             <div class="row">
                 <label>Gender:</label>
                 <div>
-                    <input type="radio" id="male" name="gender" value="male" onchange="genderchane(event)">
+                    <input type="radio" id="male" name="gender" value="male" onchange="genderChange(event)"/>
                     <label class="text">Male</label>
-                    <input type="radio" id="female" name="gender" value="female" onchange="genderchane(event)">
+                    <input type="radio" id="female" name="gender" value="female" onchange="genderChange(event)"/>
                     <label class="text">Female</label>
                 </div>
             </div>
             <div class="row">
                 <label>Department:</label>
                 <div>
-                    <input type="checkbox" id="hr" name="dept" value="hr" onchange="Deptchane(event)">
+                    <input type="checkbox" id="hr" name="dept" value="hr" onchange="deptChange(event)"/>
                     <label class="text">HR</label>
-                    <input type="checkbox" id="sales" name="dept" value="sales" onchange="Deptchane(event)">
+                    <input type="checkbox" id="sales" name="dept" value="sales" onchange="deptChange(event)"/>
                     <label class="text">sales</label>
-                    <input type="checkbox" id="finance" name="dept" value="finance" onchange="Deptchane(event)">
+                    <input type="checkbox" id="finance" name="dept" value="finance" onchange="deptChange(event)"/>
                     <label class="text">finance</label>
-                    <input type="checkbox" id="engineer" name="dept" value="engineer" onchange="Deptchane(event)">
+                    <input type="checkbox" id="engineer" name="dept" value="engineer" onchange="deptChange(event)"/>
                     <label class="text">engineer</label>
-                    <input type="checkbox" id="others" name="dept" value="others" onchange="Deptchane(event)">
+                    <input type="checkbox" id="others" name="dept" value="others" onchange="deptChange(event)"/>
                     <label class="text">others</label>
                 </div>
             </div>
             <div class="row">
                 <label class="text">Salary:</label>
                 <div>
-                    <select id="salary" name="salary" style="width: 300px;" onchange="Salarychane(event)">
+                    <select id="salary" name="salary" style="width: 300px;" onchange="salaryChange(event)">
                         <option selected disabled hidden>choose Your Salary</option>
                         <option value="1">3LPA</option>
                         <option value="2">4LPA</option>
@@ -85,7 +86,7 @@
             <div class="row">
                 <label class="text">Start Date</label>
                 <div>
-                    <select id="day" name="day" style="width: 100px;" onchange="daychane(event)">
+                    <select id="day" name="day" style="width: 100px;" onchange="dayChange(event)">
                         <option selected disabled hidden>Day</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -119,7 +120,7 @@
                         <option value="30">30</option>
                         <option value="31">31</option>
                     </select>
-                    <select id="month" name="month" style="width: 100px;" onchange="monthchane(event)">
+                    <select id="month" name="month" style="width: 100px;" onchange="monthChange(event)">
                         <option selected disabled hidden>Month</option>>
                         <option value="1">January</option>
                         <option value="2">February</option>
@@ -134,7 +135,7 @@
                         <option value="11">November</option>
                         <option value="12">December</option>
                     </select>
-                    <select id="Year" name="Year" style="width: 100px;" onchange="yaerchane(event)">
+                    <select id="Year" name="Year" style="width: 100px;" onchange="yearChange(event)">
                         <option selected disabled hidden>Year</option>
                         <option value="1">2018</option>
                         <option value="2">2019</option>
@@ -146,22 +147,23 @@
             </div>
             <div class="row">
                 <label class="label text" for="notes">Notes:</label>
-                <textarea id="notes" class="input" name="notes" placeholder=""
-                    style="height: 60px; flex: auto;" onchange="Notechane(event)"></textarea>
+                <textarea type="text" id="notes" class="input" name="notes" placeholder="comments"
+                    style="height: 60px; flex: auto;" onchange="commentsChange(event)"></textarea>
             </div>
             <div class="row">
                 <div style="width: 70%; margin-left: 40px;">
-                    <button class="common" onclick="cancelclick()">Cancel</button>
+                    <button class="common" onclick="cancelClick()">Cancel</button>
                 </div>
                 <div>
-                    <button class="submit" onclick="submitclick()">Submit</button>
-                    <button class="common" onclick="ResetClick()">Reset</button>
+                    <button class="submit" onclick="submitClick()">Submit</button>
+                    <button class="common" onclick="resetClick()">Reset</button>
                 </div>
             </div>
         </form>
     </div>
 </body>
 <script>
+    
     let name = "";
     let profileImage = "";
     let gender = "";
@@ -172,31 +174,31 @@
     function nameChange(event) {
         name = event.target.value;
     }
-    function profilechane(event) {
+    function profileImageChange(event) {
         profileImage = event.target.value;
     }
-    function genderchane(event) {
+    function genderChange(event) {
         gender = event.target.value;
     }
-    function Deptchane(event) {
+    function deptChange(event) {
         dept = event.target.value;
     }
-    function Salarychane(event) {
+    function salaryChange(event) {
         sal = event.target.value;
     }
-    function daychane(event){
+    function dayChange(event){
         day = event.target.value;
     }
-    function monthchane(event){
+    function monthChange(event){
         month = event.target.value;
     }
-    function yaerchane(event){
+    function yearChange(event){
         year = event.target.value;
     }
-    function Notechane(event){
+    function commentsChange(event){
         comment = event.target.value;
     }
-    function submitclick(){
+    function submitClick(){
         console.log(name+"\n"+profileImage+"\n"+gender+"\n"+dept+"\n"+sal+"\n"+day+":"+month+":"+year+"\n"+comment);
         var obj={
             name:name,
@@ -204,21 +206,11 @@
             gender:gender,
             department:dept,
             salary:sal,
-            doj:day+":"+month+":"+year,
+            dob:day+":"+month+":"+year,
             comments:comment
         }
         localStorage.setItem("EmpObject",JSON.stringify(obj));
-        var retrieval = localStorage.getItem("EmpObject");
-        console.log(retrieval);
-    }
-    function ResetClick(){
-        name="";
-        document.getElementById("name").value="";
-        sal="";
-        document.getElementById("salary").value="";
-    }
-    function cancelclick(){
-        window.location.href="dummy.html";
+        console.log(localStorage.getItem("EmpObject"));
     }
 </script>
 <style>
