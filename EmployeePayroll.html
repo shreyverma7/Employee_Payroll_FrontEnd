@@ -1,9 +1,11 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EmployeePayroll</title>
 </head>
+
 <body>
     <div class="conatiner">
         <div class="Logo">
@@ -14,43 +16,96 @@
             </div>
         </div>
     </div>
+    <div class="formdetails">
+        <form class="form">
+            <p class="header">Employee Payroll Form</p>
+            <div class="row">
+                <label for="text">Name: </label>
+                <input type="text" id="text" name="text">
+            </div>
+        </form>
+    </div>
 </body>
 <style>
-    body{
+    body {
         margin: 0;
         height: 100%;
     }
 
-    .container{
+    .container {
         display: flex;
         flex-direction: row;
         border: 0px solid green;
         justify-content: center;
         align-items: center;
-        padding: 15px 0;
+        background-color: white;
     }
-    .logo{
+
+    .logo {
         display: flex;
         flex-direction: row;
         align-items: center;
         border: 0px solid green;
-        width: 80%;
+        width: 100%;
+        padding-left: 25px;
     }
-    .employee{
+
+    .employee {
         font: normal bold 22px/25px Montserrat;
         text-align: left;
         text-transform: capitalize;
-        opacity: 1;
         color: green;
         margin: 0%;
     }
-    .payroll{
+
+    .payroll {
         font: normal bold 22px/25px Montserrat;
         text-align: left;
         text-transform: capitalize;
         margin: 0%;
     }
-    *{box-sizing: border-box;}
+
+    .formdetails {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 0px solid green;
+        background-color: whitesmoke;
+    }
+
+    .form {
+        width: 50%;
+        padding: 45px 60px;
+        border: 0px solid;
+        border-radius: 8px;
+        height: 76%;
+        background-color: white;
+    }
+
+    .header {
+        text-align: left;
+        font: normal bold 20px Roboto;
+        text-transform: capitalize;
+        margin: 0px;
+    }
+
+    label {
+        min-width: 140px;
+        padding: 12px 12px 12px 0;
+        display: inline-block;
+    }
+    .row{
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 10px;
+        align-items: center;
+        border: 0px solid green;
+}
+input {
+        flex: auto;
+    }
 
 </style>
+
 </html>
