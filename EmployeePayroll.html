@@ -19,37 +19,73 @@
     <div class="formdetails">
         <form class="form">
             <p class="header">Employee Payroll Form</p>
-            
-            
+
+
             <div class="row">
-                <div class="Left">
-                <label for="text">Name: </label>
-                </div>
-                <div class = "Right">
-                <input type="text" id="text" name="text">
-                </div>
+                    <label for="text">Name: </label>    
+                    <input type="text" id="text" name="text">
             </div>
 
 
             <div class="row">
                 <label class="label text" for="profile">Profile Name:</label>
                 <div class="profile-radio-content">
-                    <label>
+                    <div style=" display: flex;">
                         <input type="radio" id="profile1" name="profile" value="Ellipse 1.png" required>
                         <img class="profile" id="image1" src="Ellipse 1.png">
-                    </label>
-                    <label>
+                    </div>
+                    <div style=" display: flex;">
                         <input type="radio" id="profile2" name="profile" value="Ellipse -2.png" required>
                         <img class="profile" id="image2" src="Ellipse -2.png">
-                    </label>
-                    <label>
+                    </div>
+                    <div style=" display: flex;">
                         <input type="radio" id="profile3" name="profile" value="Ellipse -3.png" required>
                         <img class="profile" id="image3" src="Ellipse -3.png">
-                    </label>
-                    <label>
+                    </div>
+                    <div style=" display: flex;">
                         <input type="radio" id="profile4" name="profile" value="Ellipse -4.png" required>
                         <img class="profile" id="image4" src="Ellipse -4.png">
-                    </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <label for="gender left">Gender:</label>
+                <div>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label class="text" for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label class="text" for="female">Female</label>
+                </div>
+            </div>
+            <div class="row">
+                <label for="department">Department:</label>
+                <div class="check">
+                    <input type="checkbox" id="hr" name="hr" value="hr">
+                    <label class="text" for="hr">HR</label>
+                    <input type="checkbox" id="sales" name="sales" value="sales">
+                    <label class="text" for="sales">sales</label>
+                    <input type="checkbox" id="finance" name="finance" value="finance">
+                    <label class="text" for="finance">finance</label>
+                    <input type="checkbox" id="engineer" name="engineer" value="engineer">
+                    <label class="text" for="engineer">engineer</label>
+                    <input type="checkbox" id="others" name="others" value="others">
+                    <label class="text" for="others">others</label>
+                </div>
+            </div>
+            <div class="row">
+                <label class="text" for="salary">Salary:</label>
+                <div>
+                    <select id="salary" name="salary" style="width: 300px;">
+                        <option value="0">Choose Your Salary</option>
+                        <option value="1">3LPA</option>
+                        <option value="1">4LPA</option>
+                        <option value="1">5LPA</option>
+                        <option value="1">6LPA</option>
+                        <option value="1">7LPA</option>
+                        <option value="1">8LPA</option>
+                        <option value="1">9LPA</option>
+                    </select>
                 </div>
             </div>
         </form>
@@ -121,32 +157,22 @@
 
     label {
         min-width: 100px;
-        padding: 12px 12px 12px 0;
+        /* padding: 12px 12px 12px 0; */
         display: inline-block;
-    }
+    } 
 
     .row {
         display: flex;
         flex-direction: row;
-        margin-bottom: 10px;
         align-items: center;
         border: 0px solid green;
+        margin-top: 5%;
     }
-    .left{
+    .check{
         display: flex;
         flex-direction: row;
-        margin-bottom: 10px;
         align-items: center;
         border: 0px solid green;
-        width: 20%;
-    }
-    .right{
-        display: flex;
-        flex-direction: row;
-        margin-bottom: 10px;
-        align-items: center;
-        border: 0px solid green;
-        width: 80%;
     }
 
     input {
@@ -155,8 +181,8 @@
 
     .profile {
         width: 40px;
+        margin-right: 30px;
         border-radius: 50%;
-        margin-left: 12px;
     }
 
     .profile-radio-content {
@@ -170,5 +196,6 @@
         align-items: center;
     }
 </style>
+
 
 </html>
